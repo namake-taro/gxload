@@ -1,0 +1,39 @@
+/* GNOME XLoad Extension Stylesheet */
+
+/* パネルボックス */
+.xload-panel-box {
+    spacing: 4px;
+    padding: 0 4px;
+}
+
+/* 数値ラベル */
+.xload-panel-label {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #ffffff;
+    min-width: 2.5em;
+    text-align: right;
+}
+
+/* グラフ領域 */
+.xload-graph {
+    margin: 2px 0;
+    border-radius: 2px;
+}
+
+/* ポップアップメニュー: コンテナ */
+.xload-top-container {
+    min-width: 450px;
+}
+
+/* ポップアップメニュー: メニューアイテム */
+.xload-menu-item {
+    padding: 4px 8px;
+}
+
+/* ポップアップメニュー: top出力 */
+.xload-top-output {
+    font-family: monospace;
+    font-size: 9pt;
+    color: #000000;
+}

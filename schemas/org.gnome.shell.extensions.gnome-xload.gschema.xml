@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-xload">
+  <schema id="org.gnome.shell.extensions.gnome-xload"
+          path="/org/gnome/shell/extensions/gnome-xload/">
+
+    <key type="i" name="update-interval">
+      <default>2</default>
+      <summary>Update interval in seconds</summary>
+      <description>How often to update the load average display</description>
+    </key>
+
+    <key type="i" name="graph-width">
+      <default>50</default>
+      <summary>Graph width in pixels</summary>
+      <description>Width of the graph in the panel</description>
+    </key>
+
+    <key type="s" name="graph-type">
+      <default>'line'</default>
+      <summary>Graph type</summary>
+      <description>Type of graph: 'line' or 'bar'</description>
+    </key>
+
+    <key type="b" name="auto-scale">
+      <default>false</default>
+      <summary>Auto scale graph</summary>
+      <description>Automatically adjust the graph scale based on data</description>
+    </key>
+
+    <key type="b" name="fill-graph">
+      <default>true</default>
+      <summary>Fill graph area</summary>
+      <description>Fill the area under the line graph</description>
+    </key>
+
+    <key type="d" name="max-load">
+      <default>4.0</default>
+      <summary>Maximum load value</summary>
+      <description>Maximum load value for the graph scale</description>
+    </key>
+
+    <key type="s" name="foreground-color">
+      <default>'rgba(76, 175, 80, 1.0)'</default>
+      <summary>Foreground color</summary>
+      <description>Color of the graph line/bars</description>
+    </key>
+
+    <key type="s" name="background-color">
+      <default>'rgba(48, 48, 48, 0.8)'</default>
+      <summary>Background color</summary>
+      <description>Background color of the graph</description>
+    </key>
+
+    <key type="s" name="top-text-color">
+      <default>'rgba(0, 0, 0, 1.0)'</default>
+      <summary>Top output text color</summary>
+      <description>Color of the text in the top command output popup</description>
+    </key>
+
+  </schema>
+</schemalist>
