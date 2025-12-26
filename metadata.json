@@ -1,9 +1,9 @@
 {
-  "uuid": "gnome-xload@namake-taro.github.io",
-  "name": "GNOME XLoad",
+  "uuid": "gxload@namake-taro.github.io",
+  "name": "GXLoad",
   "description": "xload-style system load monitor for GNOME Shell top bar",
   "shell-version": ["45", "46", "47", "48"],
-  "settings-schema": "org.gnome.shell.extensions.gnome-xload",
-  "url": "https://github.com/namake-taro/gnome-xload",
+  "settings-schema": "org.gnome.shell.extensions.gxload",
+  "url": "https://github.com/namake-taro/gxload",
   "version": 1
 }

@@ -1,7 +1,7 @@
 import Gio from 'gi://Gio';
 
 /**
- * LoadMonitor - /proc/loadavg からロードアベレージを読み取るクラス
+ * LoadMonitor - Reads load average from /proc/loadavg
  */
 export class LoadMonitor {
     constructor() {
@@ -9,8 +9,8 @@ export class LoadMonitor {
     }
 
     /**
-     * ロードアベレージを非同期で取得
-     * @returns {Promise<number[]>} [1分平均, 5分平均, 15分平均]
+     * Get load average asynchronously
+     * @returns {Promise<number[]>} [1min, 5min, 15min] averages
      */
     getLoadAverage() {
         return new Promise((resolve, reject) => {
@@ -26,8 +26,6 @@ export class LoadMonitor {
                     const text = decoder.decode(contents).trim();
                     const parts = text.split(/\s+/);
 
-                    // [0]: 1分平均, [1]: 5分平均, [2]: 15分平均
-                    // [3]: 実行中/総プロセス, [4]: 最後のPID
                     const loads = [
                         parseFloat(parts[0]),
                         parseFloat(parts[1]),
@@ -43,8 +41,8 @@ export class LoadMonitor {
     }
 
     /**
-     * ロードアベレージを同期で取得
-     * @returns {number[]} [1分平均, 5分平均, 15分平均]
+     * Get load average synchronously
+     * @returns {number[]} [1min, 5min, 15min] averages
      */
     getLoadAverageSync() {
         try {

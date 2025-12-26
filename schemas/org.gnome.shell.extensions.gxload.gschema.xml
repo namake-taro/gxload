@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist gettext-domain="gnome-xload">
-  <schema id="org.gnome.shell.extensions.gnome-xload"
-          path="/org/gnome/shell/extensions/gnome-xload/">
+<schemalist gettext-domain="gxload">
+  <schema id="org.gnome.shell.extensions.gxload"
+          path="/org/gnome/shell/extensions/gxload/">
 
     <key type="i" name="update-interval">
       <default>2</default>

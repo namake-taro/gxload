@@ -5,26 +5,23 @@ import Gtk from 'gi://Gtk';
 import {ExtensionPreferences, gettext as _} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 /**
- * XLoadPreferences - 設定画面
+ * XLoadPreferences - Preferences window for the extension
  */
 export default class XLoadPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
         const settings = this.getSettings();
 
-        // メインページ
         const page = new Adw.PreferencesPage({
             title: _('General'),
             icon_name: 'preferences-system-symbolic',
         });
         window.add(page);
 
-        // 表示設定グループ
         const displayGroup = new Adw.PreferencesGroup({
             title: _('Display Settings'),
         });
         page.add(displayGroup);
 
-        // 更新間隔
         const intervalRow = new Adw.SpinRow({
             title: _('Update Interval'),
             subtitle: _('Seconds between updates'),
@@ -40,7 +37,6 @@ export default class XLoadPreferences extends ExtensionPreferences {
         });
         displayGroup.add(intervalRow);
 
-        // グラフ幅
         const widthRow = new Adw.SpinRow({
             title: _('Graph Width'),
             subtitle: _('Width in pixels'),
@@ -56,7 +52,6 @@ export default class XLoadPreferences extends ExtensionPreferences {
         });
         displayGroup.add(widthRow);
 
-        // グラフタイプ
         const typeRow = new Adw.ComboRow({
             title: _('Graph Type'),
             subtitle: _('Style of the graph'),
@@ -72,7 +67,6 @@ export default class XLoadPreferences extends ExtensionPreferences {
         });
         displayGroup.add(typeRow);
 
-        // 最大ロード値
         const maxLoadRow = new Adw.SpinRow({
             title: _('Max Load Value'),
             subtitle: _('Maximum value for graph scale'),
@@ -88,13 +82,11 @@ export default class XLoadPreferences extends ExtensionPreferences {
         });
         displayGroup.add(maxLoadRow);
 
-        // オプショングループ
         const optionsGroup = new Adw.PreferencesGroup({
             title: _('Options'),
         });
         page.add(optionsGroup);
 
-        // 自動スケール
         const autoScaleRow = new Adw.SwitchRow({
             title: _('Auto Scale'),
             subtitle: _('Automatically adjust graph scale'),
@@ -103,7 +95,6 @@ export default class XLoadPreferences extends ExtensionPreferences {
             Gio.SettingsBindFlags.DEFAULT);
         optionsGroup.add(autoScaleRow);
 
-        // グラフ塗りつぶし
         const fillRow = new Adw.SwitchRow({
             title: _('Fill Graph'),
             subtitle: _('Fill area under the line'),
@@ -112,13 +103,11 @@ export default class XLoadPreferences extends ExtensionPreferences {
             Gio.SettingsBindFlags.DEFAULT);
         optionsGroup.add(fillRow);
 
-        // 色設定グループ
         const colorGroup = new Adw.PreferencesGroup({
             title: _('Colors'),
         });
         page.add(colorGroup);
 
-        // 前景色
         const fgColorRow = new Adw.EntryRow({
             title: _('Foreground Color'),
         });
@@ -128,7 +117,6 @@ export default class XLoadPreferences extends ExtensionPreferences {
         });
         colorGroup.add(fgColorRow);
 
-        // 背景色
         const bgColorRow = new Adw.EntryRow({
             title: _('Background Color'),
         });
@@ -138,7 +126,6 @@ export default class XLoadPreferences extends ExtensionPreferences {
         });
         colorGroup.add(bgColorRow);
 
-        // Top出力テキスト色
         const topTextColorRow = new Adw.EntryRow({
             title: _('Top Output Text Color'),
         });

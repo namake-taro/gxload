@@ -1,4 +1,4 @@
-# GNOME XLoad
+# GXLoad (GNOME shell extension)
 
 A GNOME Shell extension that recreates the classic UNIX `xload` command. Displays real-time system load average in the top bar with a graph and numeric value.
 
@@ -25,7 +25,7 @@ A GNOME Shell extension that recreates the classic UNIX `xload` command. Display
 ### From GNOME Extensions (Recommended)
 
 <!-- Add URL after publishing
-Install with one click from [GNOME Extensions](https://extensions.gnome.org/extension/XXXX/gnome-xload/).
+Install with one click from [GNOME Extensions](https://extensions.gnome.org/extension/XXXX/gxload/).
 -->
 
 *Coming soon*
@@ -35,21 +35,21 @@ Install with one click from [GNOME Extensions](https://extensions.gnome.org/exte
 1. Clone the repository
 
 ```bash
-git clone https://github.com/namake-taro/gnome-xload.git
-cd gnome-xload
+git clone https://github.com/namake-taro/gxload.git
+cd gxload
 ```
 
 2. Copy to extensions directory
 
 ```bash
-mkdir -p ~/.local/share/gnome-shell/extensions/gnome-xload@namake-taro.github.io
-cp -r ./* ~/.local/share/gnome-shell/extensions/gnome-xload@namake-taro.github.io/
+mkdir -p ~/.local/share/gnome-shell/extensions/gxload@namake-taro.github.io
+cp -r ./* ~/.local/share/gnome-shell/extensions/gxload@namake-taro.github.io/
 ```
 
 3. Compile schemas
 
 ```bash
-glib-compile-schemas ~/.local/share/gnome-shell/extensions/gnome-xload@namake-taro.github.io/schemas/
+glib-compile-schemas ~/.local/share/gnome-shell/extensions/gxload@namake-taro.github.io/schemas/
 ```
 
 4. Restart GNOME Shell
@@ -59,7 +59,7 @@ glib-compile-schemas ~/.local/share/gnome-shell/extensions/gnome-xload@namake-ta
 5. Enable the extension
 
 ```bash
-gnome-extensions enable gnome-xload@namake-taro.github.io
+gnome-extensions enable gxload@namake-taro.github.io
 ```
 
 Or enable it from the Extensions app.
@@ -69,7 +69,7 @@ Or enable it from the Extensions app.
 Open settings from the Extensions app, or run:
 
 ```bash
-gnome-extensions prefs gnome-xload@namake-taro.github.io
+gnome-extensions prefs gxload@namake-taro.github.io
 ```
 
 ### Settings
@@ -89,8 +89,8 @@ gnome-extensions prefs gnome-xload@namake-taro.github.io
 ## Uninstall
 
 ```bash
-gnome-extensions disable gnome-xload@namake-taro.github.io
-rm -rf ~/.local/share/gnome-shell/extensions/gnome-xload@namake-taro.github.io
+gnome-extensions disable gxload@namake-taro.github.io
+rm -rf ~/.local/share/gnome-shell/extensions/gxload@namake-taro.github.io
 ```
 
 ## License
