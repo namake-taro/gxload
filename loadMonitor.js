@@ -39,29 +39,4 @@ export class LoadMonitor {
             });
         });
     }
-
-    /**
-     * Get load average synchronously
-     * @returns {number[]} [1min, 5min, 15min] averages
-     */
-    getLoadAverageSync() {
-        try {
-            const [success, contents] = this._file.load_contents(null);
-            if (!success)
-                return [0, 0, 0];
-
-            const decoder = new TextDecoder('utf-8');
-            const text = decoder.decode(contents).trim();
-            const parts = text.split(/\s+/);
-
-            return [
-                parseFloat(parts[0]),
-                parseFloat(parts[1]),
-                parseFloat(parts[2]),
-            ];
-        } catch (e) {
-            console.error('XLoad: Failed to read load average:', e);
-            return [0, 0, 0];
-        }
-    }
 }
