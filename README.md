@@ -24,11 +24,7 @@ A GNOME Shell extension that recreates the classic UNIX `xload` command. Display
 
 ### From GNOME Extensions (Recommended)
 
-<!-- Add URL after publishing
-Install with one click from [GNOME Extensions](https://extensions.gnome.org/extension/XXXX/gxload/).
--->
-
-*Coming soon*
+Install with one click from [GNOME Extensions](https://extensions.gnome.org/extension/9067/gxload/).
 
 ### Manual Installation
 
